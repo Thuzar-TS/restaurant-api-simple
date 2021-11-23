@@ -110,7 +110,7 @@ class RestaurantController extends Controller
         DB::beginTransaction();
         try {
             $restaurant->delete();
-            CustomLog::info("Delete ".$id);
+            CustomLog::info("Delete Restaurant ID ".$id);
             DB::commit();
         } catch (\Exception $e) {
             DB::rollback();
